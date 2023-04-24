@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 
 function TransactionTable() {
   const [selectedCategory, setSelectedCategory] = useState("All");
-  const [transactions, setTransactions] = useState([]);
+  const [transactions, setTransactions] = useState([]); //setting the initial state of the transactions to be an empty array
 
   //fetching the transactions
   useEffect(() => {
@@ -15,7 +15,7 @@ function TransactionTable() {
     <div className="App">
       <table>
         <tr>
-          <th>ID</th>
+          {/* <th>ID</th> */}
           <th>DATE</th>
           <th>DESCRIPTION</th>
           <th>CATEGORY</th>
@@ -24,7 +24,7 @@ function TransactionTable() {
         {transactions.map((val, key) => {
           return (
             <tr key={key}>
-              <td>{val.id}</td>
+              {/* <td>{val.id}</td> */}
               <td>{val.date}</td>
               <td>{val.description}</td>
               <td>{val.category}</td>
