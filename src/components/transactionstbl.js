@@ -11,8 +11,13 @@ function TransactionTable() {
       .then((transactions) => setTransactions(transactions));
   }, []);
 
+  function TransactionForm(newTransaction) {
+    setTransactions([...transactions, newTransaction]);
+  }
+
   return (
-    <div className="App">
+    <div className="TransTable">
+      <TransactionForm onAddTransaction={TransactionForm} />
       <table>
         <tr>
           {/* <th>ID</th> */}

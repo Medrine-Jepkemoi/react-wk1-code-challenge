@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function TransactionForm() {
+function TransactionForm({ onAddTransaction }) {
   const [date, setDate] = useState("");
   const [description, setDescription] = useState("");
   const [category, setCategory] = useState("Income");
@@ -18,7 +18,7 @@ function TransactionForm() {
 
     console.log(transactionData);
 
-    fetch("http://localhost:4000/items", {
+    fetch("http://localhost:3000/transactions", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -26,11 +26,11 @@ function TransactionForm() {
       body: JSON.stringify(transactionData),
     })
       .then((r) => r.json())
-      .then((newTransaction) => console.log(newTransaction));
+      .then((newTransaction) => onAddTransaction(newTransaction));
   }
 
   return (
-    <div className="App">
+    <div className="TransForm">
       <form className="NewTransaction" onSubmit={handleSubmit}>
         <label>Date</label>
         <input type="text" name="date" value={date} onChange={(e) => setDate(e.target.value)} />

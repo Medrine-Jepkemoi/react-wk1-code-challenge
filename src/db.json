@@ -97,6 +97,20 @@
       "category": "Food",
       "amount": "3000",
       "id": 14
+    },
+    {
+      "date": "2000-05-05",
+      "description": "KFC",
+      "category": "Food",
+      "amount": "490",
+      "id": 15
+    },
+    {
+      "date": "2000-05-05",
+      "description": "KFC",
+      "category": "Food",
+      "amount": "490",
+      "id": 16
     }
   ]
 }
