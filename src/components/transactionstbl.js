@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import Delete from "./Delete";
 
 function TransactionTable() {
   const [selectedCategory, setSelectedCategory] = useState("All");
@@ -34,6 +35,9 @@ function TransactionTable() {
               <td>{val.description}</td>
               <td>{val.category}</td>
               <td>{val.amount}</td>
+              <td>
+                <Delete />
+              </td>
             </tr>
           );
         })}
