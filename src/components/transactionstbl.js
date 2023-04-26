@@ -34,7 +34,7 @@ function TransactionTable() {
             <th>DESCRIPTION</th>
             <th>CATEGORY</th>
             <th>AMOUNT</th>
-            <th></th>
+            <th>DELETE TRANSACTION</th>
           </tr>
         </thead>
         <tbody>
