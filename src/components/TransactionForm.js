@@ -18,7 +18,7 @@ function TransactionForm({ onAddTransaction }) {
 
     console.log(transactionData);
 
-    fetch("https://my-json-server.typicode.com/Medrine-Jepkemoi/react-wk1-code-challenge/transactions", {
+    fetch("https://transactionssite.onrender.com/transactions", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

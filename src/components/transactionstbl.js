@@ -6,7 +6,7 @@ function TransactionTable() {
 
   //fetching the transactions
   useEffect(() => {
-    fetch("https://my-json-server.typicode.com/Medrine-Jepkemoi/react-wk1-code-challenge/transactions")
+    fetch("https://transactionssite.onrender.com/transactions")
       .then((res) => res.json())
       .then((transactions) => setTransactions(transactions));
   }, []);
@@ -16,7 +16,7 @@ function TransactionTable() {
   }
 
   function handleDeleteClick(id) {
-    fetch(`https://my-json-server.typicode.com/Medrine-Jepkemoi/react-wk1-code-challenge/transactions/${id}`, {
+    fetch(`https://transactionssite.onrender.com/transactions/${id}`, {
       method: "DELETE",
     })
       .then((r) => r.json())
