@@ -104,6 +104,13 @@
       "category": "Food",
       "amount": "500",
       "id": 15
+    },
+    {
+      "date": "2000-05-05",
+      "description": "KFC",
+      "category": "Gift",
+      "amount": "490",
+      "id": 16
     }
   ]
 }

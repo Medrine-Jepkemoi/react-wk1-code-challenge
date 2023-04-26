@@ -15,17 +15,17 @@ function TransactionTable() {
     setTransactions([...transactions, newTransaction]);
   }
 
-  function handleDeleteClick({ id }) {
+  function handleDeleteClick(id) {
     fetch(`http://localhost:3000/transactions/${id}`, {
       method: "DELETE",
     })
       .then((r) => r.json())
-      .then((transaction) => console.log("deleted!"));
+      .then(() => console.log("deleted!"));
   }
 
   return (
     <div className="TransTable">
-      <TransactionForm onAddTransaction={TransactionForm} />
+      {/* <TransactionForm onAddTransaction={TransactionForm} /> */}
       <table>
         <thead>
           <tr>
@@ -34,6 +34,7 @@ function TransactionTable() {
             <th>DESCRIPTION</th>
             <th>CATEGORY</th>
             <th>AMOUNT</th>
+            <th></th>
           </tr>
         </thead>
         <tbody>
@@ -45,7 +46,10 @@ function TransactionTable() {
                 <td>{transaction.description}</td>
                 <td>{transaction.category}</td>
                 <td>{transaction.amount}</td>
-                <button>Click</button>
+                <button className="delete-btn" onClick={() => handleDeleteClick(transaction.id)}>
+                  {" "}
+                  Delete{" "}
+                </button>
               </tr>
             )
             // <td>
