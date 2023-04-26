@@ -3,6 +3,7 @@
 #### About
 
 First code challenge under phase 1 to test my understanding of components, props, state, events and data fetching in react
+[Link to my project:] https://react-wk1-code-challenge.vercel.app/
 
 ## Description
 
