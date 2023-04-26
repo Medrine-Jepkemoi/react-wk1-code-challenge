@@ -16,7 +16,7 @@ function TransactionTable() {
   }
 
   function handleDeleteClick(id) {
-    fetch(`http://localhost:3000/transactions/${id}`, {
+    fetch(`https://my-json-server.typicode.com/Medrine-Jepkemoi/react-wk1-code-challenge/transactions/${id}`, {
       method: "DELETE",
     })
       .then((r) => r.json())
