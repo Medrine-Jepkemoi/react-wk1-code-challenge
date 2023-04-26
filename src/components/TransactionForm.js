@@ -31,12 +31,18 @@ function TransactionForm({ onAddTransaction }) {
 
   return (
     <div className="TransForm">
+      <p>Please fill in the form to add a transaction</p>
       <form className="NewTransaction" onSubmit={handleSubmit}>
         <label>Date</label>
-        <input type="text" name="date" value={date} onChange={(e) => setDate(e.target.value)} />
+        <br />
+        <input type="date" name="date" value={date} onChange={(e) => setDate(e.target.value)} />
+        <br />
         <label>Description</label>
+        <br />
         <input type="text" name="description" value={description} onChange={(e) => setDescription(e.target.value)} />
+        <br />
         <label>Category</label>
+        <br />
         <select type="text" name="category" value={category} onChange={(e) => setCategory(e.target.value)}>
           <option value="Income">Income</option>
           <option value="Food">Food</option>
@@ -45,9 +51,12 @@ function TransactionForm({ onAddTransaction }) {
           <option value="Transportation">Transportation</option>
           <option value="Housing">Housing</option>
         </select>
+        <br />
         <label>Amount</label>
+        <br />
         <input type="text" name="amount" value={amount} onChange={(e) => setAmount(e.target.value)} />
-        <button type="submit">Add to List</button>
+        <br />
+        <button type="submit">Submit</button>
       </form>
     </div>
   );
