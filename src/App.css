@@ -1,5 +1,10 @@
 .App {
-  text-align: center;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  font-size: 16px;
+  /* font-family: sans-serif; */
 }
 
 .App-logo {
@@ -35,4 +40,60 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.TransForm {
+  /* background-color: #61dafb; */
+  height: 60vh;
+}
+
+.NewTransaction {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.TransForm label {
+  font-weight: bold;
+}
+
+.TransForm input {
+  box-sizing: border-box;
+  width: 60%;
+  border-width: 4px;
+  border-style: solid;
+  border-radius: 50px;
+  border-color: rgb(11, 11, 88);
+  height: 40px;
+
+  /* padding: 8px 12px;
+    
+    border-color: rgb(11, 11, 88);
+    width: 40%;
+    margin-top: 20px; */
+  font-size: 20px;
+}
+
+.TransForm select {
+  box-sizing: border-box;
+  width: 60%;
+  border-width: 4px;
+  border-style: solid;
+  border-radius: 50px;
+  border-color: rgb(11, 11, 88);
+  height: 40px;
+}
+.TransForm button {
+  width: 20%;
+  box-sizing: border-box;
+  border-width: 4px;
+  border-style: solid;
+  border-radius: 50px;
+  border-color: rgb(11, 11, 88);
+  height: 40px;
+}
+
+.TransTable {
+  background-color: aquamarine;
+  height: 90vh;
 }
