@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import Delete from "./Delete";
 
 function TransactionTable() {
   const [selectedCategory, setSelectedCategory] = useState("All");
@@ -16,31 +15,43 @@ function TransactionTable() {
     setTransactions([...transactions, newTransaction]);
   }
 
+  function handleDeleteClick({ id }) {
+    fetch(`http://localhost:3000/transactions/${id}`, {
+      method: "DELETE",
+    })
+      .then((r) => r.json())
+      .then(() => console.log("deleted!"));
+  }
+
   return (
     <div className="TransTable">
       <TransactionForm onAddTransaction={TransactionForm} />
       <table>
-        <tr>
-          {/* <th>ID</th> */}
-          <th>DATE</th>
-          <th>DESCRIPTION</th>
-          <th>CATEGORY</th>
-          <th>AMOUNT</th>
-        </tr>
-        {transactions.map((val, key) => {
-          return (
-            <tr key={key}>
-              {/* <td>{val.id}</td> */}
-              <td>{val.date}</td>
-              <td>{val.description}</td>
-              <td>{val.category}</td>
-              <td>{val.amount}</td>
-              <td>
-                <Delete />
-              </td>
-            </tr>
-          );
-        })}
+        <thead>
+          <tr>
+            {/* <th>ID</th> */}
+            <th>DATE</th>
+            <th>DESCRIPTION</th>
+            <th>CATEGORY</th>
+            <th>AMOUNT</th>
+          </tr>
+        </thead>
+        <tbody>
+          {transactions.map((transaction) => {
+            return (
+              <tr key={transaction.id}>
+                {/* <td>{transaction.id}</td> */}
+                <td>{transaction.date}</td>
+                <td>{transaction.description}</td>
+                <td>{transaction.category}</td>
+                <td>{transaction.amount}</td>
+                <td>
+                  <button onClick={() => handleDeleteClick(transaction.id)}> Delete </button>
+                </td>
+              </tr>
+            );
+          })}
+        </tbody>
       </table>
     </div>
   );
