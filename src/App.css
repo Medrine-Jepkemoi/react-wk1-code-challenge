@@ -43,6 +43,19 @@
   }
 }
 
+h1 {
+  height: 10vh;
+  text-align: center;
+  color: #183a1d;
+}
+
+p {
+  padding-left: 20px;
+  font-weight: bold;
+  font-size: 20px;
+  color: #183a1d;
+}
+
 .TransForm {
   /* background-color: #61dafb; */
   height: 60vh;
@@ -53,7 +66,7 @@
   align-items: center;
   flex-direction: column;
   color: #183a1d;
-  margin-bottom: 20px;
+  /* margin-bottom: 40px; */
 }
 
 .TransForm label {
@@ -105,6 +118,7 @@
   display: flex;
   align-items: center;
   flex-direction: column;
+  margin-top: 20px;
   /* background-color: aquamarine; */
   height: 200vh;
   text-align: center;

@@ -31,7 +31,7 @@ function TransactionForm({ onAddTransaction }) {
 
   return (
     <div className="TransForm">
-      <p>Please fill in the form to add a transaction</p>
+      <p>Please fill in the form to add a transaction:</p>
       <form className="NewTransaction" onSubmit={handleSubmit}>
         <label>Date</label>
         <br />
