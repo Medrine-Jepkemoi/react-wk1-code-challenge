@@ -20,7 +20,7 @@ function TransactionTable() {
       method: "DELETE",
     })
       .then((r) => r.json())
-      .then(() => console.log("deleted!"));
+      .then((transaction) => console.log("deleted!"));
   }
 
   return (
@@ -37,20 +37,21 @@ function TransactionTable() {
           </tr>
         </thead>
         <tbody>
-          {transactions.map((transaction) => {
-            return (
+          {transactions.map(
+            (transaction) => (
               <tr key={transaction.id}>
                 {/* <td>{transaction.id}</td> */}
                 <td>{transaction.date}</td>
                 <td>{transaction.description}</td>
                 <td>{transaction.category}</td>
                 <td>{transaction.amount}</td>
-                <td>
-                  <button onClick={() => handleDeleteClick(transaction.id)}> Delete </button>
-                </td>
+                <button>Click</button>
               </tr>
-            );
-          })}
+            )
+            // <td>
+            //   <button onClick={() => handleDeleteClick}>Delete</button>
+            // </td>;
+          )}
         </tbody>
       </table>
     </div>
