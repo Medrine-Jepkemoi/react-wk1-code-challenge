@@ -6,7 +6,7 @@ function TransactionTable() {
 
   //fetching the transactions
   useEffect(() => {
-    fetch("http://localhost:3000/transactions")
+    fetch("https://my-json-server.typicode.com/Medrine-Jepkemoi/react-wk1-code-challenge/transactions")
       .then((res) => res.json())
       .then((transactions) => setTransactions(transactions));
   }, []);
